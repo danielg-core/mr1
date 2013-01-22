@@ -16,6 +16,7 @@
       <parameter key="AsseticBundle">Symfony\Bundle\AsseticBundle\AsseticBundle</parameter>
       <parameter key="DoctrineBundle">Doctrine\Bundle\DoctrineBundle\DoctrineBundle</parameter>
       <parameter key="DoctrineFixturesBundle">Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle</parameter>
+      <parameter key="DoctrineMigrationsBundle">Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle</parameter>
       <parameter key="SensioFrameworkExtraBundle">Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle</parameter>
       <parameter key="JMSAopBundle">JMS\AopBundle\JMSAopBundle</parameter>
       <parameter key="JMSDiExtraBundle">JMS\DiExtraBundle\JMSDiExtraBundle</parameter>
@@ -38,8 +39,8 @@
     <parameter key="mailer_encryption">ssl</parameter>
     <parameter key="mailer_auth_mode">login</parameter>
     <parameter key="mailer_host">smtp.gmail.com</parameter>
-    <parameter key="mailer_user">tudorhornai@gmail.com</parameter>
-    <parameter key="mailer_password">adrenaline</parameter>
+    <parameter key="mailer_user">pentalog.mr1@gmail.com</parameter>
+    <parameter key="mailer_password">parolamr1</parameter>
     <parameter key="locale">en</parameter>
     <parameter key="secret">c10b255d72737330bb11b32c45618f499</parameter>
     <parameter key="database_path">null</parameter>
@@ -86,6 +87,7 @@
     <parameter key="debug.container.dump">C:/wamp/www/symblog.dev/app/cache/dev/appDevDebugProjectContainer.xml</parameter>
     <parameter key="debug.controller_resolver.class">Symfony\Bundle\FrameworkBundle\Controller\TraceableControllerResolver</parameter>
     <parameter key="kernel.secret">c10b255d72737330bb11b32c45618f499</parameter>
+    <parameter key="kernel.trusted_proxies" type="collection"/>
     <parameter key="kernel.trust_proxy_headers">false</parameter>
     <parameter key="kernel.default_locale">en</parameter>
     <parameter key="session.class">Symfony\Component\HttpFoundation\Session\Session</parameter>
@@ -312,6 +314,7 @@
     <parameter key="monolog.handler.debug.class">Symfony\Bridge\Monolog\Handler\DebugHandler</parameter>
     <parameter key="monolog.handler.swift_mailer.class">Monolog\Handler\SwiftMailerHandler</parameter>
     <parameter key="monolog.handler.native_mailer.class">Monolog\Handler\NativeMailerHandler</parameter>
+    <parameter key="monolog.handler.socket.class">Monolog\Handler\SocketHandler</parameter>
     <parameter key="monolog.handler.fingers_crossed.class">Monolog\Handler\FingersCrossedHandler</parameter>
     <parameter key="monolog.handler.fingers_crossed.error_level_activation_strategy.class">Monolog\Handler\FingersCrossed\ErrorLevelActivationStrategy</parameter>
     <parameter key="monolog.handlers_to_channels" type="collection">
@@ -333,8 +336,8 @@
     <parameter key="swiftmailer.transport.smtp.encryption">ssl</parameter>
     <parameter key="swiftmailer.transport.smtp.port">465</parameter>
     <parameter key="swiftmailer.transport.smtp.host">smtp.gmail.com</parameter>
-    <parameter key="swiftmailer.transport.smtp.username">tudorhornai@gmail.com</parameter>
-    <parameter key="swiftmailer.transport.smtp.password">adrenaline</parameter>
+    <parameter key="swiftmailer.transport.smtp.username">pentalog.mr1@gmail.com</parameter>
+    <parameter key="swiftmailer.transport.smtp.password">parolamr1</parameter>
     <parameter key="swiftmailer.transport.smtp.auth_mode">login</parameter>
     <parameter key="swiftmailer.transport.smtp.timeout">30</parameter>
     <parameter key="swiftmailer.transport.smtp.source_ip">null</parameter>
@@ -345,6 +348,7 @@
     <parameter key="swiftmailer.spool.enabled">true</parameter>
     <parameter key="swiftmailer.sender_address">null</parameter>
     <parameter key="swiftmailer.single_address">null</parameter>
+    <parameter key="swiftmailer.delivery_whitelist" type="collection"/>
     <parameter key="assetic.asset_factory.class">Symfony\Bundle\AsseticBundle\Factory\AssetFactory</parameter>
     <parameter key="assetic.asset_manager.class">Assetic\Factory\LazyAssetManager</parameter>
     <parameter key="assetic.asset_manager_cache_warmer.class">Symfony\Bundle\AsseticBundle\CacheWarmer\AssetManagerCacheWarmer</parameter>
@@ -438,6 +442,10 @@
     <parameter key="doctrine.orm.auto_generate_proxy_classes">true</parameter>
     <parameter key="doctrine.orm.proxy_dir">C:/wamp/www/symblog.dev/app/cache/dev/doctrine/orm/Proxies</parameter>
     <parameter key="doctrine.orm.proxy_namespace">Proxies</parameter>
+    <parameter key="doctrine_migrations.dir_name">C:/wamp/www/symblog.dev/app/DoctrineMigrations</parameter>
+    <parameter key="doctrine_migrations.namespace">Application\Migrations</parameter>
+    <parameter key="doctrine_migrations.table_name">migration_versions</parameter>
+    <parameter key="doctrine_migrations.name">Application Migrations</parameter>
     <parameter key="sensio_framework_extra.view.guesser.class">Sensio\Bundle\FrameworkExtraBundle\Templating\TemplateGuesser</parameter>
     <parameter key="sensio_framework_extra.controller.listener.class">Sensio\Bundle\FrameworkExtraBundle\EventListener\ControllerListener</parameter>
     <parameter key="sensio_framework_extra.routing.loader.annot_dir.class">Symfony\Component\Routing\Loader\AnnotationDirectoryLoader</parameter>
@@ -463,8 +471,8 @@
     <parameter key="jms_di_extra.directories" type="collection"/>
     <parameter key="jms_di_extra.cache_dir">C:/wamp/www/symblog.dev/app/cache/dev/jms_diextra</parameter>
     <parameter key="jms_di_extra.doctrine_integration">true</parameter>
-    <parameter key="jms_di_extra.doctrine_integration.entity_manager.file">C:/wamp/www/symblog.dev/app/cache/dev/jms_diextra/doctrine/EntityManager_50c47a9c9774e.php</parameter>
-    <parameter key="jms_di_extra.doctrine_integration.entity_manager.class">EntityManager50c47a9c9774e_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager</parameter>
+    <parameter key="jms_di_extra.doctrine_integration.entity_manager.file">C:/wamp/www/symblog.dev/app/cache/dev/jms_diextra/doctrine/EntityManager_50fee83ec7f92.php</parameter>
+    <parameter key="jms_di_extra.doctrine_integration.entity_manager.class">EntityManager50fee83ec7f92_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager</parameter>
     <parameter key="security.secured_services" type="collection"/>
     <parameter key="security.access.method_interceptor.class">JMS\SecurityExtraBundle\Security\Authorization\Interception\MethodSecurityInterceptor</parameter>
     <parameter key="security.access.method_access_control" type="collection"/>
@@ -1947,6 +1955,10 @@
       <call method="addExtension">
         <argument type="service" id="twig.extension.acme.demo"/>
       </call>
+      <call method="addGlobal">
+        <argument>app</argument>
+        <argument type="service" id="templating.globals"/>
+      </call>
     </service>
     <service id="twig.loader" class="Symfony\Bundle\TwigBundle\Loader\FilesystemLoader">
       <argument type="service" id="templating.locator"/>
@@ -2137,8 +2149,8 @@
     <service id="doctrine.orm.default_manager_configurator" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator">
       <argument type="collection"/>
     </service>
-    <service id="doctrine.orm.default_entity_manager" class="EntityManager50c47a9c9774e_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager">
-      <file>C:/wamp/www/symblog.dev/app/cache/dev/jms_diextra/doctrine/EntityManager_50c47a9c9774e.php</file>
+    <service id="doctrine.orm.default_entity_manager" class="EntityManager50fee83ec7f92_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager">
+      <file>C:/wamp/www/symblog.dev/app/cache/dev/jms_diextra/doctrine/EntityManager_50fee83ec7f92.php</file>
       <argument type="service">
         <service class="Doctrine\ORM\EntityManager" factory-method="create" public="false">
           <argument type="service" id="doctrine.dbal.default_connection"/>
@@ -2588,10 +2600,10 @@
         <argument>ssl</argument>
       </call>
       <call method="setUsername">
-        <argument>tudorhornai@gmail.com</argument>
+        <argument>pentalog.mr1@gmail.com</argument>
       </call>
       <call method="setPassword">
-        <argument>adrenaline</argument>
+        <argument>parolamr1</argument>
       </call>
       <call method="setAuthMode">
         <argument>login</argument>

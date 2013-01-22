@@ -266,11 +266,11 @@ class appDevDebugProjectContainer extends Container
      * This service is shared.
      * This method always returns the same instance of the service.
      *
-     * @return EntityManager50c47a9c9774e_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager A EntityManager50c47a9c9774e_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager instance.
+     * @return EntityManager50fee83ec7f92_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager A EntityManager50fee83ec7f92_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager instance.
      */
     protected function getDoctrine_Orm_DefaultEntityManagerService()
     {
-        require_once 'C:/wamp/www/symblog.dev/app/cache/dev/jms_diextra/doctrine/EntityManager_50c47a9c9774e.php';
+        require_once 'C:/wamp/www/symblog.dev/app/cache/dev/jms_diextra/doctrine/EntityManager_50fee83ec7f92.php';
 
         $a = new \Doctrine\Common\Cache\ArrayCache();
         $a->setNamespace('sf2orm_default_d3e7436f83a8b676145d6b7505aa7f69');
@@ -300,7 +300,7 @@ class appDevDebugProjectContainer extends Container
         $f = call_user_func(array('Doctrine\\ORM\\EntityManager', 'create'), $this->get('doctrine.dbal.default_connection'), $e);
         $this->get('doctrine.orm.default_manager_configurator')->configure($f);
 
-        return $this->services['doctrine.orm.default_entity_manager'] = new \EntityManager50c47a9c9774e_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager($f, $this);
+        return $this->services['doctrine.orm.default_entity_manager'] = new \EntityManager50fee83ec7f92_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager($f, $this);
     }
 
     /**
@@ -1842,8 +1842,8 @@ class appDevDebugProjectContainer extends Container
         $instance->setHost('smtp.gmail.com');
         $instance->setPort(465);
         $instance->setEncryption('ssl');
-        $instance->setUsername('tudorhornai@gmail.com');
-        $instance->setPassword('adrenaline');
+        $instance->setUsername('pentalog.mr1@gmail.com');
+        $instance->setPassword('parolamr1');
         $instance->setAuthMode('login');
         $instance->setTimeout(30);
         $instance->setSourceIp(NULL);
@@ -2473,6 +2473,7 @@ class appDevDebugProjectContainer extends Container
         $instance->addExtension(new \Symfony\Bundle\AsseticBundle\Twig\AsseticExtension($this->get('assetic.asset_factory'), $this->get('templating.name_parser'), true, array(), array(), $this->get('assetic.value_supplier.default')));
         $instance->addExtension(new \JMS\SecurityExtraBundle\Twig\SecurityExtension($a));
         $instance->addExtension($this->get('twig.extension.acme.demo'));
+        $instance->addGlobal('app', $this->get('templating.globals'));
 
         return $instance;
     }
@@ -2579,7 +2580,7 @@ class appDevDebugProjectContainer extends Container
     /**
      * Gets the doctrine.orm.entity_manager service alias.
      *
-     * @return EntityManager50c47a9c9774e_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager An instance of the doctrine.orm.default_entity_manager service
+     * @return EntityManager50fee83ec7f92_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager An instance of the doctrine.orm.default_entity_manager service
      */
     protected function getDoctrine_Orm_EntityManagerService()
     {
@@ -2936,6 +2937,7 @@ class appDevDebugProjectContainer extends Container
                 'AsseticBundle' => 'Symfony\\Bundle\\AsseticBundle\\AsseticBundle',
                 'DoctrineBundle' => 'Doctrine\\Bundle\\DoctrineBundle\\DoctrineBundle',
                 'DoctrineFixturesBundle' => 'Doctrine\\Bundle\\FixturesBundle\\DoctrineFixturesBundle',
+                'DoctrineMigrationsBundle' => 'Doctrine\\Bundle\\MigrationsBundle\\DoctrineMigrationsBundle',
                 'SensioFrameworkExtraBundle' => 'Sensio\\Bundle\\FrameworkExtraBundle\\SensioFrameworkExtraBundle',
                 'JMSAopBundle' => 'JMS\\AopBundle\\JMSAopBundle',
                 'JMSDiExtraBundle' => 'JMS\\DiExtraBundle\\JMSDiExtraBundle',
@@ -2958,8 +2960,8 @@ class appDevDebugProjectContainer extends Container
             'mailer_encryption' => 'ssl',
             'mailer_auth_mode' => 'login',
             'mailer_host' => 'smtp.gmail.com',
-            'mailer_user' => 'tudorhornai@gmail.com',
-            'mailer_password' => 'adrenaline',
+            'mailer_user' => 'pentalog.mr1@gmail.com',
+            'mailer_password' => 'parolamr1',
             'locale' => 'en',
             'secret' => 'c10b255d72737330bb11b32c45618f499',
             'database_path' => NULL,
@@ -3006,6 +3008,9 @@ class appDevDebugProjectContainer extends Container
             'debug.container.dump' => 'C:/wamp/www/symblog.dev/app/cache/dev/appDevDebugProjectContainer.xml',
             'debug.controller_resolver.class' => 'Symfony\\Bundle\\FrameworkBundle\\Controller\\TraceableControllerResolver',
             'kernel.secret' => 'c10b255d72737330bb11b32c45618f499',
+            'kernel.trusted_proxies' => array(
+
+            ),
             'kernel.trust_proxy_headers' => false,
             'kernel.default_locale' => 'en',
             'session.class' => 'Symfony\\Component\\HttpFoundation\\Session\\Session',
@@ -3238,6 +3243,7 @@ class appDevDebugProjectContainer extends Container
             'monolog.handler.debug.class' => 'Symfony\\Bridge\\Monolog\\Handler\\DebugHandler',
             'monolog.handler.swift_mailer.class' => 'Monolog\\Handler\\SwiftMailerHandler',
             'monolog.handler.native_mailer.class' => 'Monolog\\Handler\\NativeMailerHandler',
+            'monolog.handler.socket.class' => 'Monolog\\Handler\\SocketHandler',
             'monolog.handler.fingers_crossed.class' => 'Monolog\\Handler\\FingersCrossedHandler',
             'monolog.handler.fingers_crossed.error_level_activation_strategy.class' => 'Monolog\\Handler\\FingersCrossed\\ErrorLevelActivationStrategy',
             'monolog.handlers_to_channels' => array(
@@ -3259,8 +3265,8 @@ class appDevDebugProjectContainer extends Container
             'swiftmailer.transport.smtp.encryption' => 'ssl',
             'swiftmailer.transport.smtp.port' => 465,
             'swiftmailer.transport.smtp.host' => 'smtp.gmail.com',
-            'swiftmailer.transport.smtp.username' => 'tudorhornai@gmail.com',
-            'swiftmailer.transport.smtp.password' => 'adrenaline',
+            'swiftmailer.transport.smtp.username' => 'pentalog.mr1@gmail.com',
+            'swiftmailer.transport.smtp.password' => 'parolamr1',
             'swiftmailer.transport.smtp.auth_mode' => 'login',
             'swiftmailer.transport.smtp.timeout' => 30,
             'swiftmailer.transport.smtp.source_ip' => NULL,
@@ -3271,6 +3277,9 @@ class appDevDebugProjectContainer extends Container
             'swiftmailer.spool.enabled' => true,
             'swiftmailer.sender_address' => NULL,
             'swiftmailer.single_address' => NULL,
+            'swiftmailer.delivery_whitelist' => array(
+
+            ),
             'assetic.asset_factory.class' => 'Symfony\\Bundle\\AsseticBundle\\Factory\\AssetFactory',
             'assetic.asset_manager.class' => 'Assetic\\Factory\\LazyAssetManager',
             'assetic.asset_manager_cache_warmer.class' => 'Symfony\\Bundle\\AsseticBundle\\CacheWarmer\\AssetManagerCacheWarmer',
@@ -3374,6 +3383,10 @@ class appDevDebugProjectContainer extends Container
             'doctrine.orm.auto_generate_proxy_classes' => true,
             'doctrine.orm.proxy_dir' => 'C:/wamp/www/symblog.dev/app/cache/dev/doctrine/orm/Proxies',
             'doctrine.orm.proxy_namespace' => 'Proxies',
+            'doctrine_migrations.dir_name' => 'C:/wamp/www/symblog.dev/app/DoctrineMigrations',
+            'doctrine_migrations.namespace' => 'Application\\Migrations',
+            'doctrine_migrations.table_name' => 'migration_versions',
+            'doctrine_migrations.name' => 'Application Migrations',
             'sensio_framework_extra.view.guesser.class' => 'Sensio\\Bundle\\FrameworkExtraBundle\\Templating\\TemplateGuesser',
             'sensio_framework_extra.controller.listener.class' => 'Sensio\\Bundle\\FrameworkExtraBundle\\EventListener\\ControllerListener',
             'sensio_framework_extra.routing.loader.annot_dir.class' => 'Symfony\\Component\\Routing\\Loader\\AnnotationDirectoryLoader',
@@ -3403,8 +3416,8 @@ class appDevDebugProjectContainer extends Container
             ),
             'jms_di_extra.cache_dir' => 'C:/wamp/www/symblog.dev/app/cache/dev/jms_diextra',
             'jms_di_extra.doctrine_integration' => true,
-            'jms_di_extra.doctrine_integration.entity_manager.file' => 'C:/wamp/www/symblog.dev/app/cache/dev/jms_diextra/doctrine/EntityManager_50c47a9c9774e.php',
-            'jms_di_extra.doctrine_integration.entity_manager.class' => 'EntityManager50c47a9c9774e_546a8d27f194334ee012bfe64f629947b07e4919\\__CG__\\Doctrine\\ORM\\EntityManager',
+            'jms_di_extra.doctrine_integration.entity_manager.file' => 'C:/wamp/www/symblog.dev/app/cache/dev/jms_diextra/doctrine/EntityManager_50fee83ec7f92.php',
+            'jms_di_extra.doctrine_integration.entity_manager.class' => 'EntityManager50fee83ec7f92_546a8d27f194334ee012bfe64f629947b07e4919\\__CG__\\Doctrine\\ORM\\EntityManager',
             'security.secured_services' => array(
 
             ),

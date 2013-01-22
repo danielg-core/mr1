@@ -61,6 +61,22 @@ class __TwigTemplate_e22ebef01a6f23e725ac850aa21b07ce extends Twig_Template
         echo "</p>
         </div>
     </article>
+    
+    <section class=\"comments\" id=\"comments\">
+        <section class=\"previous-comments\">
+            <h3>Comments</h3>
+            ";
+        // line 21
+        $this->env->loadTemplate("BloggerBlogBundle:Comment:index.html.twig")->display(array_merge($context, array("comments" => $this->getContext($context, "comments"))));
+        // line 22
+        echo "            
+            <h3>Add Comment</h3>
+            ";
+        // line 24
+        echo $this->env->getExtension('actions')->renderAction("BloggerBlogBundle:Comment:new", array("blog_id" => $this->getAttribute($this->getContext($context, "blog"), "id")), array());
+        // line 25
+        echo "        </section>
+    </section>
 ";
     }
 
@@ -76,6 +92,6 @@ class __TwigTemplate_e22ebef01a6f23e725ac850aa21b07ce extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  60 => 14,  53 => 12,  48 => 10,  42 => 9,  38 => 7,  35 => 6,  29 => 4,);
+        return array (  78 => 25,  76 => 24,  72 => 22,  70 => 21,  60 => 14,  53 => 12,  48 => 10,  42 => 9,  38 => 7,  35 => 6,  29 => 4,);
     }
 }

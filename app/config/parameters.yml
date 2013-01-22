@@ -9,8 +9,8 @@ parameters:
     mailer_encryption: ssl
     mailer_auth_mode: login
     mailer_host: smtp.gmail.com
-    mailer_user: tudorhornai@gmail.com
-    mailer_password: adrenaline
+    mailer_user: pentalog.mr1@gmail.com
+    mailer_password: parolamr1
     locale: en
     secret: c10b255d72737330bb11b32c45618f499
     database_path: null

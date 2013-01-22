@@ -51,7 +51,7 @@ class __TwigTemplate_ad27cb8b8f2f05bc1b71990f056c8568 extends Twig_Template
             echo "_close\" alt=\"-\" src=\"";
             echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/framework/images/blue_picto_less.gif"), "html", null, true);
             echo "\" style=\"visibility: ";
-            echo (((0 == $this->getContext($context, "count"))) ? ("display") : ("hidden"));
+            echo (((0 == $this->getContext($context, "count"))) ? ("visible") : ("hidden"));
             echo "\" />
                 <img class=\"toggle\" id=\"icon_traces_";
             // line 9
@@ -59,7 +59,7 @@ class __TwigTemplate_ad27cb8b8f2f05bc1b71990f056c8568 extends Twig_Template
             echo "_open\" alt=\"+\" src=\"";
             echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/framework/images/blue_picto_more.gif"), "html", null, true);
             echo "\" style=\"visibility: ";
-            echo (((0 == $this->getContext($context, "count"))) ? ("hidden") : ("display"));
+            echo (((0 == $this->getContext($context, "count"))) ? ("hidden") : ("visible"));
             echo "; margin-left: -18px\" />
             </a>
             ";
@@ -119,6 +119,6 @@ class __TwigTemplate_ad27cb8b8f2f05bc1b71990f056c8568 extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  105 => 24,  98 => 22,  96 => 21,  93 => 20,  89 => 19,  83 => 18,  76 => 16,  72 => 14,  68 => 12,  50 => 8,  33 => 5,  27 => 4,  24 => 3,  22 => 2,  225 => 96,  216 => 90,  212 => 88,  205 => 84,  201 => 83,  196 => 80,  194 => 79,  191 => 78,  189 => 77,  186 => 76,  180 => 72,  178 => 71,  172 => 67,  163 => 63,  159 => 61,  157 => 60,  154 => 59,  147 => 55,  143 => 54,  138 => 51,  136 => 50,  132 => 48,  130 => 47,  127 => 46,  121 => 45,  118 => 44,  114 => 43,  104 => 36,  100 => 34,  95 => 31,  78 => 28,  75 => 27,  71 => 26,  63 => 24,  60 => 23,  58 => 9,  41 => 7,  34 => 11,  19 => 1,  94 => 39,  88 => 6,  81 => 40,  79 => 17,  59 => 22,  48 => 19,  39 => 6,  35 => 7,  31 => 6,  26 => 6,  21 => 1,  46 => 8,  43 => 7,  32 => 4,  29 => 3,);
+        return array (  105 => 24,  98 => 22,  96 => 21,  93 => 20,  89 => 19,  83 => 18,  68 => 12,  50 => 8,  33 => 5,  27 => 4,  24 => 3,  22 => 2,  225 => 96,  216 => 90,  212 => 88,  205 => 84,  201 => 83,  196 => 80,  194 => 79,  191 => 78,  189 => 77,  186 => 76,  180 => 72,  178 => 71,  172 => 67,  163 => 63,  159 => 61,  157 => 60,  154 => 59,  147 => 55,  143 => 54,  138 => 51,  136 => 50,  132 => 48,  130 => 47,  127 => 46,  121 => 45,  118 => 44,  114 => 43,  104 => 36,  100 => 34,  95 => 31,  75 => 27,  71 => 26,  63 => 24,  58 => 9,  41 => 7,  34 => 11,  19 => 1,  94 => 39,  88 => 6,  81 => 40,  79 => 17,  59 => 22,  39 => 6,  31 => 6,  26 => 6,  21 => 1,  46 => 8,  43 => 7,  32 => 4,  78 => 28,  76 => 16,  72 => 14,  70 => 21,  60 => 23,  53 => 12,  48 => 19,  42 => 9,  38 => 7,  35 => 7,  29 => 3,);
     }
 }
