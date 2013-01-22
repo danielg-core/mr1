@@ -4,7 +4,7 @@ mr1
 MR1 team repo
 
 Currently developing symblog.dev tutorial
-Part 1-3 completed.
+Part 1-4 completed.
 
 
 FRONT 
