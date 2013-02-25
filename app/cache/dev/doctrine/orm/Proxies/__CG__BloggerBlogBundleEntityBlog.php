@@ -159,10 +159,34 @@ class Blog extends \Blogger\BlogBundle\Entity\Blog implements \Doctrine\ORM\Prox
         return parent::getComments();
     }
 
+    public function __toString()
+    {
+        $this->__load();
+        return parent::__toString();
+    }
+
+    public function setSlug($slug)
+    {
+        $this->__load();
+        return parent::setSlug($slug);
+    }
+
+    public function getSlug()
+    {
+        $this->__load();
+        return parent::getSlug();
+    }
+
+    public function slugify($text)
+    {
+        $this->__load();
+        return parent::slugify($text);
+    }
+
 
     public function __sleep()
     {
-        return array('__isInitialized__', 'id', 'title', 'author', 'blog', 'image', 'tags', 'created', 'updated', 'comments');
+        return array('__isInitialized__', 'id', 'title', 'author', 'blog', 'image', 'tags', 'created', 'updated', 'slug', 'comments');
     }
 
     public function __clone()

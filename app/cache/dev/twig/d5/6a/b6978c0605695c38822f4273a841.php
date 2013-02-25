@@ -35,11 +35,11 @@ class __TwigTemplate_d56ab6978c0605695c38822f4273a841 extends Twig_Template
         echo " - symblog</title>
         <!--[if lt IE 9]>
             <script src=\"http://html5shim.googlecode.com/svn/trunk/html5.js\"></script>
-        <![endif]-->
+        <![endif]--> 
         ";
         // line 9
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 14
+        // line 18
         echo "        <link rel=\"shortcut icon\" href=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("favicon.ico"), "html", null, true);
         echo "\" />
@@ -50,18 +50,18 @@ class __TwigTemplate_d56ab6978c0605695c38822f4273a841 extends Twig_Template
             <header id=\"header\">
                 <div class=\"top\">
                     ";
-        // line 21
+        // line 25
         $this->displayBlock('navigation', $context, $blocks);
-        // line 30
+        // line 34
         echo "                </div>
 
                 <hgroup>
                     <h2>";
-        // line 33
+        // line 37
         $this->displayBlock('blog_title', $context, $blocks);
         echo "</h2>
                     <h3>";
-        // line 34
+        // line 38
         $this->displayBlock('blog_tagline', $context, $blocks);
         echo "</h3>
                 </hgroup>
@@ -69,29 +69,29 @@ class __TwigTemplate_d56ab6978c0605695c38822f4273a841 extends Twig_Template
 
             <section class=\"main-col\">
                 ";
-        // line 39
+        // line 43
         $this->displayBlock('body', $context, $blocks);
-        // line 40
+        // line 44
         echo "            </section>
             <aside class=\"sidebar\">
                 ";
-        // line 42
+        // line 46
         $this->displayBlock('sidebar', $context, $blocks);
-        // line 43
+        // line 47
         echo "            </aside>
 
             <div id=\"footer\">
                 ";
-        // line 46
+        // line 50
         $this->displayBlock('footer', $context, $blocks);
-        // line 49
+        // line 53
         echo "            </div>
         </section>
 
         ";
-        // line 52
+        // line 56
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 53
+        // line 57
         echo "    </body>
 </html>";
     }
@@ -108,29 +108,45 @@ class __TwigTemplate_d56ab6978c0605695c38822f4273a841 extends Twig_Template
         // line 10
         echo "            <link href='http://fonts.googleapis.com/css?family=Irish+Grover' rel='stylesheet' type='text/css'>
             <link href='http://fonts.googleapis.com/css?family=La+Belle+Aurore' rel='stylesheet' type='text/css'>
-            <link href=\"";
+            ";
         // line 12
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("css/screen.css"), "html", null, true);
-        echo "\" type=\"text/css\" rel=\"stylesheet\" />
-        ";
+        if (isset($context['assetic']['debug']) && $context['assetic']['debug']) {
+            // asset "51c56cc_0"
+            $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('routing')->getPath("_assetic_51c56cc_0") : $this->env->getExtension('assets')->getAssetUrl("_controller/css/51c56cc_part_1_screen_1.css");
+            // line 15
+            echo "                <link href=\"";
+            echo twig_escape_filter($this->env, $this->getContext($context, "asset_url"), "html", null, true);
+            echo "\" rel=\"stylesheet\" media=\"screen\" />
+            ";
+        } else {
+            // asset "51c56cc"
+            $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('routing')->getPath("_assetic_51c56cc") : $this->env->getExtension('assets')->getAssetUrl("_controller/css/51c56cc.css");
+            echo "                <link href=\"";
+            echo twig_escape_filter($this->env, $this->getContext($context, "asset_url"), "html", null, true);
+            echo "\" rel=\"stylesheet\" media=\"screen\" />
+            ";
+        }
+        unset($context["asset_url"]);
+        // line 17
+        echo "        ";
     }
 
-    // line 21
+    // line 25
     public function block_navigation($context, array $blocks = array())
     {
-        // line 22
+        // line 26
         echo "                        <nav>
                             <ul class=\"navigation\">
                                 <li><a href=\"";
-        // line 24
+        // line 28
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("BloggerBlogBundle_homepage"), "html", null, true);
         echo "\">Home</a></li>
                                 <li><a href=\"";
-        // line 25
+        // line 29
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("BloggerBlogBundle_about"), "html", null, true);
         echo "\">About</a></li>
                                 <li><a href=\"";
-        // line 26
+        // line 30
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("BloggerBlogBundle_contact"), "html", null, true);
         echo "\">Contact</a></li>
                             </ul>
@@ -138,7 +154,7 @@ class __TwigTemplate_d56ab6978c0605695c38822f4273a841 extends Twig_Template
                     ";
     }
 
-    // line 33
+    // line 37
     public function block_blog_title($context, array $blocks = array())
     {
         echo "<a href=\"";
@@ -146,7 +162,7 @@ class __TwigTemplate_d56ab6978c0605695c38822f4273a841 extends Twig_Template
         echo "\">symblog</a>";
     }
 
-    // line 34
+    // line 38
     public function block_blog_tagline($context, array $blocks = array())
     {
         echo "<a href=\"";
@@ -154,25 +170,25 @@ class __TwigTemplate_d56ab6978c0605695c38822f4273a841 extends Twig_Template
         echo "\">creating a blog in Symfony2</a>";
     }
 
-    // line 39
+    // line 43
     public function block_body($context, array $blocks = array())
     {
     }
 
-    // line 42
+    // line 46
     public function block_sidebar($context, array $blocks = array())
     {
     }
 
-    // line 46
+    // line 50
     public function block_footer($context, array $blocks = array())
     {
-        // line 47
+        // line 51
         echo "                    Symfony2 blog tutorial - created by <a href=\"https://github.com/dsyph3r\">dsyph3r</a>
                 ";
     }
 
-    // line 52
+    // line 56
     public function block_javascripts($context, array $blocks = array())
     {
     }
@@ -189,6 +205,6 @@ class __TwigTemplate_d56ab6978c0605695c38822f4273a841 extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  176 => 52,  171 => 47,  168 => 46,  163 => 42,  158 => 39,  150 => 34,  142 => 33,  134 => 26,  130 => 25,  126 => 24,  122 => 22,  119 => 21,  113 => 12,  109 => 10,  106 => 9,  100 => 5,  95 => 53,  93 => 52,  88 => 49,  86 => 46,  81 => 43,  79 => 42,  75 => 40,  73 => 39,  65 => 34,  61 => 33,  56 => 30,  54 => 21,  41 => 9,  34 => 5,  46 => 10,  43 => 14,  32 => 5,  29 => 4,  87 => 25,  78 => 21,  72 => 20,  64 => 15,  60 => 14,  55 => 12,  47 => 9,  40 => 7,  37 => 6,  31 => 5,  28 => 1,);
+        return array (  192 => 56,  187 => 51,  184 => 50,  179 => 46,  174 => 43,  166 => 38,  158 => 37,  150 => 30,  146 => 29,  142 => 28,  138 => 26,  135 => 25,  131 => 17,  117 => 15,  113 => 12,  109 => 10,  106 => 9,  100 => 5,  95 => 57,  93 => 56,  88 => 53,  86 => 50,  81 => 47,  79 => 46,  75 => 44,  73 => 43,  65 => 38,  61 => 37,  56 => 34,  54 => 25,  43 => 18,  41 => 9,  34 => 5,  28 => 1,  67 => 17,  64 => 16,  42 => 12,  38 => 7,  32 => 5,  29 => 4,);
     }
 }

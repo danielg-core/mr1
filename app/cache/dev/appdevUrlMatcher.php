@@ -25,6 +25,46 @@ class appdevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         $allow = array();
         $pathinfo = rawurldecode($pathinfo);
 
+        // _assetic_e95c551
+        if ($pathinfo === '/css/blogger.css') {
+            return array (  '_controller' => 'assetic.controller:render',  'name' => 'e95c551',  'pos' => NULL,  '_format' => 'css',  '_route' => '_assetic_e95c551',);
+        }
+
+        // _assetic_e95c551_0
+        if ($pathinfo === '/css/blogger_part_1_blog_1.css') {
+            return array (  '_controller' => 'assetic.controller:render',  'name' => 'e95c551',  'pos' => '0',  '_format' => 'css',  '_route' => '_assetic_e95c551_0',);
+        }
+
+        // _assetic_e95c551_1
+        if ($pathinfo === '/css/blogger_part_1_sidebar_2.css') {
+            return array (  '_controller' => 'assetic.controller:render',  'name' => 'e95c551',  'pos' => '1',  '_format' => 'css',  '_route' => '_assetic_e95c551_1',);
+        }
+
+        // _assetic_d8f44a4
+        if ($pathinfo === '/css/d8f44a4.css') {
+            return array (  '_controller' => 'assetic.controller:render',  'name' => 'd8f44a4',  'pos' => NULL,  '_format' => 'css',  '_route' => '_assetic_d8f44a4',);
+        }
+
+        // _assetic_d8f44a4_0
+        if ($pathinfo === '/css/d8f44a4_part_1_blog_1.css') {
+            return array (  '_controller' => 'assetic.controller:render',  'name' => 'd8f44a4',  'pos' => '0',  '_format' => 'css',  '_route' => '_assetic_d8f44a4_0',);
+        }
+
+        // _assetic_d8f44a4_1
+        if ($pathinfo === '/css/d8f44a4_part_1_sidebar_2.css') {
+            return array (  '_controller' => 'assetic.controller:render',  'name' => 'd8f44a4',  'pos' => '1',  '_format' => 'css',  '_route' => '_assetic_d8f44a4_1',);
+        }
+
+        // _assetic_51c56cc
+        if ($pathinfo === '/css/51c56cc.css') {
+            return array (  '_controller' => 'assetic.controller:render',  'name' => '51c56cc',  'pos' => NULL,  '_format' => 'css',  '_route' => '_assetic_51c56cc',);
+        }
+
+        // _assetic_51c56cc_0
+        if ($pathinfo === '/css/51c56cc_part_1_screen_1.css') {
+            return array (  '_controller' => 'assetic.controller:render',  'name' => '51c56cc',  'pos' => '0',  '_format' => 'css',  '_route' => '_assetic_51c56cc_0',);
+        }
+
         // _demo_login
         if ($pathinfo === '/demo/secured/login') {
             return array (  '_controller' => 'Acme\\DemoBundle\\Controller\\SecuredController::loginAction',  '_route' => '_demo_login',);
@@ -191,7 +231,7 @@ class appdevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         not_BloggerBlogBundle_contact:
 
         // BloggerBlogBundle_blog_show
-        if (preg_match('#^/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
+        if (preg_match('#^/(?P<id>\\d+)/(?P<slug>[^/]+)$#s', $pathinfo, $matches)) {
             if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
                 $allow = array_merge($allow, array('GET', 'HEAD'));
                 goto not_BloggerBlogBundle_blog_show;
